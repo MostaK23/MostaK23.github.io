@@ -1,43 +1,21 @@
-const room1 = './images/room.jpeg';
-const room2 = './images/room2.jpg';
+import { Scene, HotSpotInfo, HotSpotScene } from './constructors.js';
 
-const bgImage = './images/bg.jpg';
+const room1 = new Scene('equirectangular', './images/room.jpeg', [
+  new HotSpotInfo(-2, 5, 'Картина', 'https://www.youtube.com/'),
+  new HotSpotScene(123, 0, 'Купаться', 'sea')
+]);
 
+const sea = new Scene('equirectangular', './images/sea.jpg', [
+  new HotSpotScene(90, 5, 'Домой', 'room1')
+]);
 
 pannellum.viewer('panorama', {
   "default": {
-    "firstScene": "room2",
-    "autoLoad": true
+    "firstScene": "room1",
   },
   "scenes": {
-    "room1": {
-      "type": "equirectangular",
-      "panorama": room1,
-      "hotSpots": [
-        {
-          "pitch": 0,
-          "yaw": 125,
-          "type": "scene",
-          "text": "Комната 2",
-          "sceneId": "room2"
-        }
-      ]
-    },
-    "room2": {
-      "type": "equirectangular",
-      "panorama": room2,
-      "pitch": 4,
-      "yaw": -120,
-      "hotSpots": [
-        {
-          "pitch": 7,
-          "yaw": -115,
-          "type": "scene",
-          "text": "Комната 1",
-          "sceneId": "room1"
-        }
-      ]
-    }
+    "room1": room1,
+    "sea": sea
   }
 });
 
