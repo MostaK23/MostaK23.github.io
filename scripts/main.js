@@ -1,7 +1,7 @@
 import { Scene, HotSpotInfo, HotSpotScene } from './constructors.js';
 
 const room1 = new Scene('equirectangular', './images/room.jpeg', [
-  new HotSpotInfo(-2, 5, 'Картина', 'https://www.youtube.com/'),
+  new HotSpotInfo(-2, 5, 'Картина', 'https://www.youtube.com/watch?v=iik25wqIuFo'),
   new HotSpotScene(123, 0, 'Купаться', 'sea')
 ]);
 
