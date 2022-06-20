@@ -14,8 +14,8 @@ export function HotSpotScene(angle, y, text, nextScene) {
   this.sceneId = nextScene;
 }
 
-export function Scene(type, panorama, hotSpots) {
-  this.type = type;
+export function EquirectangleScene(panorama, hotSpots) {
+  this.type = 'equirectangular';
   this.panorama = panorama;
   this.hotSpots = hotSpots;
 }
