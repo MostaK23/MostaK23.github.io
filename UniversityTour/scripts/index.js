@@ -1,9 +1,13 @@
-import { scene1 } from '../scenes/scene1.js';
+import { audience_210_1 } from '../scenes/audience_210_1/audience_210_1.js';
+import { audience_210_2 } from '../scenes/audience_210_2/audience_210_2.js';
 
 pannellum.viewer('panorama', {
-	"firstScene": "scene1",
-	"autoLoad": true,
+	"default": {
+		"firstScene": "audience_210_2",
+		"autoLoad": true,
+	},
 	"scenes": {
-		scene1
+		audience_210_1,
+		audience_210_2
 	}
 });
