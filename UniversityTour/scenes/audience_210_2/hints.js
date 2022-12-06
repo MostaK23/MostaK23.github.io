@@ -5,13 +5,13 @@ const boardDescription = 'Интерактивная система Ritter 86\n\
 
 const computer = new Hint({
 	yaw: -110,
-	pitch: -19,
+	pitch: -21,
 	text: computerDescription,
 });
 
 const board = new Hint({
 	yaw: -36,
-	pitch: 2,
+	pitch: -3,
 	text: boardDescription,
 });
 
